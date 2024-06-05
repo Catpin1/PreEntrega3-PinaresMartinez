@@ -1,0 +1,204 @@
+@import "variables";
+@import "mixins";
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales - body */
+body {
+    background-color: $color-background;
+    color: $color-text;
+}
+
+/* Estilos del header */
+header {
+    background-color: $color-header;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    @include flex-center;
+    justify-content: space-between; /* Eje horizontal */
+}
+
+.logo {
+    width: 40%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    padding: 60px;
+    margin-right: 80px;
+    gap: 30px;
+    font-size: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+header nav ul li a:hover {
+    color: $color-link-hover; /* Cambia el color */
+    font-weight: bold;
+}
+
+nav ul .pagina {
+    background-color: tomato;
+}
+
+header img {
+    width: 50%;
+}
+
+/* Estilos de main index */
+main {
+    @include flex-center;
+    margin: 20px 50px;
+    gap: 30px;
+}
+
+main .textos {
+    text-align: center;
+}
+
+main .textos h1 span {
+    display: block;
+}
+
+.boton .btn {
+    @include button-styles;
+}
+
+/* Estilos de section */
+section {
+    background-color: $color-section-background;
+    color: $color-header;
+    @include flex-center;
+    padding: 20px;
+    margin-top: 30px;
+    gap: 50px;
+
+    div {
+        text-align: center;
+        gap: 80px;
+        margin: 0px 40px 0px 10px;
+    }
+}
+
+/* Estilos del carrusel */
+.carrusel {
+    @include flex-center;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    background-color: $color-header;
+}
+
+/* Tienda */
+/* Imágenes productos de la tienda */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: $color-product-background;
+    border: 1px solid $color-product-border;
+    border-radius: 5px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.Mapa iframe {
+    position: center;
+    top: 50px;
+    left: 3px;
+    width: 50%;
+    height: 50%;
+    border: 0;
+}
+
+/* Noticias */
+.noticia1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: $color-news-background;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px $color-news-border; /* Sombra */
+}
+
+.imgNoticia {
+    @include flex-center;
+}
+
+/* Contacto */
+.contactanos {
+    width: 70%;
+    @include flex-center;
+    margin-left: 300px;
+}
+
+.contacto {
+    display: flex;
+    margin-right: 200px;
+}
+
+/* Estilos footer */
+footer {
+    text-align: center;
+    color: $color-text;
+    margin: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+
+        nav ul {
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            gap: 10px;
+        }
+
+        img {
+            width: 70%;
+            margin-bottom: 10px;
+        }
+    }
+
+    main {
+        flex-direction: column;
+        margin: 0 20px;
+
+        .imagen img {
+            width: 100%;
+        }
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .Mapa iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
