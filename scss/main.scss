@@ -143,17 +143,21 @@ section {
     @include flex-center;
 }
 
-/* Contacto */
 .contactanos {
-    width: 70%;
-    @include flex-center;
-    margin-left: 300px;
-}
-
-.contacto {
+    width: 80%;
+    margin: 0 auto; 
+  }
+  
+  .contacto {
     display: flex;
-    margin-right: 200px;
-}
+    justify-content: center;
+  }
+  
+  .form-control {
+    width: 120%; 
+    margin-left: 80px;
+  }
+  
 
 /* Estilos footer */
 footer {
