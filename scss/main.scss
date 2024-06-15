@@ -8,19 +8,17 @@
     box-sizing: border-box;
 }
 
-/* Estilos generales - body */
 body {
     background-color: $color-background;
     color: $color-text;
 }
 
-/* Estilos del header */
 header {
     background-color: $color-header;
     padding: 10px 10px;
     margin-bottom: 20px;
     @include flex-center;
-    justify-content: space-between; /* Eje horizontal */
+    justify-content: space-between; 
 }
 
 .logo {
@@ -42,19 +40,18 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: $color-link-hover; /* Cambia el color */
+    color: $color-link-hover; 
     font-weight: bold;
 }
 
 nav ul .pagina {
-    background-color: tomato;
+    background-color: #615D5D;
 }
 
 header img {
     width: 50%;
 }
 
-/* Estilos de main index */
 main {
     @include flex-center;
     margin: 20px 50px;
@@ -73,7 +70,6 @@ main .textos h1 span {
     @include button-styles;
 }
 
-/* Estilos de section */
 section {
     background-color: $color-section-background;
     color: $color-header;
@@ -87,9 +83,19 @@ section {
         gap: 80px;
         margin: 0px 40px 0px 10px;
     }
+    
+    .redes {
+    
+        a.social-link {
+            color: $color-text; /* Color del texto de los enlaces */
+        }
+    }
+    
+
 }
 
-/* Estilos del carrusel */
+
+
 .carrusel {
     @include flex-center;
 }
@@ -98,8 +104,6 @@ section {
     background-color: $color-header;
 }
 
-/* Tienda */
-/* Imágenes productos de la tienda */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -129,33 +133,38 @@ section {
     border: 0;
 }
 
-/* Noticias */
+
 .noticia1 {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background-color: $color-news-background;
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 0 10px $color-news-border; /* Sombra */
+    border-radius: 5px;
+    box-shadow: 0 0 10px $color-news-border; 
 }
+
 
 .imgNoticia {
     @include flex-center;
 }
 
-/* Contacto */
 .contactanos {
-    width: 70%;
-    @include flex-center;
-    margin-left: 300px;
-}
-
-.contacto {
+    width: 80%;
+    margin: 0 auto; 
+  }
+  
+  .contacto {
     display: flex;
-    margin-right: 200px;
-}
+    justify-content: center;
+  }
+  
+  .form-control {
+    width: 120%; 
+    margin-left: 80px;
+  }
+  
 
-/* Estilos footer */
+
 footer {
     text-align: center;
     color: $color-text;

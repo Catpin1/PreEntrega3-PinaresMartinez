@@ -150,18 +150,21 @@ section div {
   justify-content: center;
 }
 
-/* Contacto */
+/* Estilos para el formulario de contacto */
 .contactanos {
-  width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 300px;
+  width: 80%;
+  margin: 0 auto; 
 }
 
 .contacto {
   display: flex;
-  margin-right: 200px;
+  justify-content: center; 
+}
+
+/* Ajusta el ancho de los campos de texto */
+.form-control {
+  width: 120%; /* Establece el ancho al 100% del contenedor */
+  margin-left: 80px;
 }
 
 /* Estilos footer */
@@ -200,10 +203,18 @@ footer {
     padding: 10px;
     gap: 20px;
   }
+
   .Mapa iframe {
     width: 100%;
     height: 300px;
   }
 }
+
+
+.social-link {
+      color: #615D5D; 
+
+  }
+
 
 /*# sourceMappingURL=style.css.map */
